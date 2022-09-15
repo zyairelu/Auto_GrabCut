@@ -14,10 +14,10 @@ re_saved_root = '/Users/zyairelu/Desktop/Vessel_Segmentation/my_UNet/data/grb_ud
 # img_load = load_img(img_root)
 # N = img_load.len_()
 # for i in range(N):
-#     batch_process(img_root, mask_root, i, saved_root)
+#     batch_process(img_root, mask_root, i, saved_root, 5)
 
 # batch updated process
 img_load = load_img(re_img_root)
 N = img_load.len_()
 for i in range(N):
-    batch_process(re_img_root, re_mask_root, i, re_saved_root)
+    batch_process(re_img_root, re_mask_root, i, re_saved_root, 10)

@@ -88,7 +88,16 @@ def random_label_ground(mask_s, flag):
         # [x, y] = [index_255[0, col_1], index_255[1, col_1]]
         return [x, y]
 
-# def judgment(img):
-#     # Determine whether the processed image is qualified
+def judgment(img):
+    # Determine whether the processed image is qualified
+    img = np.array(img)
+    EA_mat = np.where(img != 0)
 
-#     return 
+    TH = 600     # threshold
+    Bad_Points = np.size(EA_mat, 1)
+
+    if Bad_Points < TH:
+        print('This image is bad!')
+        return False
+    else:
+        return True
